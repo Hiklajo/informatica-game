@@ -21,9 +21,10 @@ var gravity = 	250
 
 
 
-
+#sprites
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animated_sprite_2_effects: AnimatedSprite2D = $AnimatedSprite2_effects
+#sound design
 @onready var jumpsound: AudioStreamPlayer2D = $jumpsound
 @onready var fall: AudioStreamPlayer2D = $fall
 
@@ -36,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	if velocity.y > 600:
 		was_high_fall = true
 		
-
+	#bounce effect
 	if is_jumping:
 		if velocity.x == 0:
 			animated_sprite_2d.play("jump_up")
@@ -50,7 +51,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x=last_direction*move_speed*delta
 	else:
 		velocity.x= get_input_velocity() * move_speed * delta
-
+	
 	if is_on_floor():
 		is_jumping = false
 
@@ -132,8 +133,11 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+	#debug testing, E is screen reset voor jump testing
 	if Input.is_action_just_released("interact"):
 		get_tree().reload_current_scene()
+
+	#squish effect reset
 	animated_sprite_2d.scale.x = move_toward(animated_sprite_2d.scale.x, 1,0.8*delta)
 	animated_sprite_2d.scale.y = move_toward(animated_sprite_2d.scale.y, 1, 0.8*delta)
 	collision_shape_2d.scale.x = move_toward(collision_shape_2d.scale.x, 1, 0.8*delta)
