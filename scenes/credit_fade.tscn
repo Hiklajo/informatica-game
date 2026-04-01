@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dd7mofqmtlbgk"]
+
+[ext_resource type="Script" uid="uid://50ym1mcpc0b4" path="res://scenes/credit_fade.gd" id="1_fj4mc"]
+
+[node name="credit-fade" type="CanvasLayer" unique_id=338579790]
+script = ExtResource("1_fj4mc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1001191013]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
