@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bexx42vbkmmvp"]
+
+[ext_resource type="Script" uid="uid://d34vvldtn8cil" path="res://scripts/cutscene_collision.gd" id="1_k7pvv"]
+
+[node name="cutscene_collision" type="Area2D" unique_id=1500305388]
+collision_mask = 2
+script = ExtResource("1_k7pvv")
