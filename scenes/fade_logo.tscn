@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bo7gvs0u8sw4c"]
+
+[ext_resource type="Script" uid="uid://id58nfodw3kd" path="res://scenes/fade_logo.gd" id="1_vipta"]
+
+[node name="Fade-logo" type="CanvasLayer" unique_id=1184165597]
+script = ExtResource("1_vipta")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1249588456]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
